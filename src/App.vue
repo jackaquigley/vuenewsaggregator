@@ -1,18 +1,24 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+  <div id="pageWrapper"
+  <header>
+  <header-component />
+  </header>
+  <story-view />
+  </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HeaderComponent from './components/HeaderComponent.vue'
+import StoryView from './views/StoryView.vue'
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    'header-component': HeaderComponent,
+    'story-view': StoryView,  }
 }
 </script>
 
