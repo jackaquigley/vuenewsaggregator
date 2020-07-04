@@ -1,10 +1,10 @@
 <template>
   <div id="storyWrapper">
-    <source-view />
+    <story-list v-for="(story, index) in stories" :key="index" :story="story"/>
   </div>
 </template>
 <script>
-import SourceView from './SourceView.vue'
+import StoryList from '../components/StoryList.vue'
 
 export default {
   name: 'story-view',
@@ -14,7 +14,7 @@ export default {
     }
   },
   components: {
-    'source-view': SourceView
+   'story-list': StoryList
   },
   created() {
     fetch('http://localhost:8080/api/stories/')
