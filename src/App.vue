@@ -1,10 +1,15 @@
 <template>
-  <div>
-  <div id="pageWrapper"
+  <div id="pageWrapper">
+  <div id="headerWrapper">
   <header>
   <header-component />
   </header>
+  </div>
+  <div id="contentWrapper">
   <story-view />
+  <div id="sidebarWrapper">
+    <p>Side Bar</p>
+  </div>
   </div>
   </div>
 </template>
@@ -23,12 +28,36 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
+#pageWrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
+
+#headerWrapper {
+  width: 100%;
+  height: 20%;
+}
+
+#contentWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#sidebarWrapper {
+  width: 20%;
+  height: 100%;
+}
+
 </style>

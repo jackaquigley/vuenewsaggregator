@@ -1,5 +1,5 @@
 <template>
-  <div id="">
+  <div id="storyWrapper">
     <source-view />
   </div>
 </template>
@@ -24,4 +24,10 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+
+#storyWrapper {
+  height: 100%;
+  width: 80%;
+}
+
 </style>
