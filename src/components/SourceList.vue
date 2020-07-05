@@ -2,38 +2,47 @@
   <article>
     <hr>
   <div class="sourceItem">
-
     <div class="sourceData">
       <div class="sourceTitle">
-    <p>{{source.sourceTitle}}</p>
+        <p>{{source.sourceTitle}}</p>
+      </div>
+      <div class="sourceJournalist">
+        <p>{{source.journalist}}</p>
+      </div>
+      <div class="sourcePublisherName">
+        <p>{{source.publisher.name}}</p>
+      </div>
+      <div class="sourceLink">
+        <a v-bind:href="source.sourceLink">View Article</a>
+      </div>
+      <div class="sourceRating">
+        <p>Rating: {{source.rating}}</p>
+      </div>
+      <div class="upvoteDownvote">
+        <button>Upvote</button>
+        <button>Downvote</button>
+      </div>
     </div>
-    <div class="sourceJournalist">
-    <p>{{source.journalist}}</p>
-    </div>
-    <div class="sourcePublisherName">
-    <p>{{source.publisher.name}}</p>
-    </div>
-    <div class="sourceLink">
-    <a v-bind:href="source.sourceLink">View Article</a>
-    </div>
-    <div class="sourceRating">
-    <p>Rating: {{source.rating}}</p>
-    </div>
-    <div class="upvoteDownvote">
-      <button>Upvote</button>
-      <button>Downvote</button>
-    </div>
-  </div>
-    <div class="sourceImgWrapper">
+  <div class="sourceImgWrapper">
     <img class="sourceImg" v-bind:src="source.sourceImg" alt="">
   </div>
+  </div>
+  <hr>
+  <div class="commentWrapper">
+    <comment-list v-for="(comment, index) in source.comments" :key="index" :comment="comment"/>
   </div>
 </article>
 </template>
 <script>
+import CommentList from './CommentList.vue'
+
+
 export default {
   name: "source-list",
-  props: ['source']
+  props: ['source'],
+  components: {
+    'comment-list': CommentList
+  }
 
   }
 
@@ -93,5 +102,12 @@ height: 180px;
 .sourceRating {
   height: 20%;
   width: 33%;
+}
+
+.commentWrapper {
+ display: flex;
+ margin-top: 2px;
+ margin-bottom: 2px;
+ justify-content: center;
 }
 </style>
