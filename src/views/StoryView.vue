@@ -34,7 +34,8 @@ methods: {
 
 #storyWrapper {
   height: 100%;
-  width: 80%;
+  width: 100%;
+  margin: 1%;
 }
 
 </style>

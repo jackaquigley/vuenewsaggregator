@@ -7,9 +7,6 @@
   </div>
   <div id="contentWrapper">
   <story-view />
-  <div id="sidebarWrapper">
-    <p>Side Bar</p>
-  </div>
   </div>
   </div>
 </template>
