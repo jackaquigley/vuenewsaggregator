@@ -17,6 +17,7 @@
 <script>
 import HeaderComponent from './components/HeaderComponent.vue'
 import StoryView from './views/StoryView.vue'
+import { eventBus } from "@/main.js";
 
 
 export default {

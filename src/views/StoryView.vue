@@ -5,6 +5,7 @@
 </template>
 <script>
 import StoryList from '../components/StoryList.vue'
+import { eventBus } from "@/main.js";
 
 export default {
   name: 'story-view',
@@ -20,6 +21,12 @@ export default {
     fetch('http://localhost:8080/api/stories/')
     .then(response => response.json())
     .then(data => this.stories = data)
+},
+methods: {
+  upvote: function(source){
+    let ratingScore = this.rating;
+    ratingScore += this.rating;
+  }
 }
 }
 </script>

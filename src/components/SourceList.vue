@@ -19,7 +19,7 @@
         <p>Rating: {{source.rating}}</p>
       </div>
       <div class="upvoteDownvote">
-        <button>Upvote</button>
+        <button v-on:click="upvote">Upvote</button>
         <button>Downvote</button>
       </div>
     </div>
@@ -35,6 +35,7 @@
 </template>
 <script>
 import CommentList from './CommentList.vue'
+import { eventBus } from "@/main.js";
 
 
 export default {
@@ -42,6 +43,11 @@ export default {
   props: ['source'],
   components: {
     'comment-list': CommentList
+  },
+  methods: {
+    upvote: function(){
+      eventBus.$emit('upvote', this.source)
+    }
   }
 
   }
