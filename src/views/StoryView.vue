@@ -11,7 +11,9 @@ export default {
   name: 'story-view',
   data() {
     return {
-      stories: []
+      stories: [],
+      sources: [],
+      comments: []
     }
   },
   components: {
@@ -21,6 +23,12 @@ export default {
     fetch('http://localhost:8080/api/stories/')
     .then(response => response.json())
     .then(data => this.stories = data)
+    fetch('http://localhost:8080/api/sources')
+    .then(response => response.json())
+    .then(data => this.sources = data)
+    fetch('http://localhost:8080/api/comments')
+    .then(response => response.json())
+    .then(data => this.comments = data)
 },
 methods: {
   upvote: function(source){
