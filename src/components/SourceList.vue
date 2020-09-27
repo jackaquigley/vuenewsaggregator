@@ -10,7 +10,7 @@
         <p>{{source.journalist}}</p>
       </div>
       <div class="sourcePublisherName">
-        <p>{{source.publisher.name}}</p>
+        <p>{{source.publisher}}</p>
       </div>
       <div class="sourceLink">
         <a v-bind:href="source.sourceLink">View Article</a>
@@ -19,7 +19,7 @@
         <p>Rating: {{source.rating}}</p>
       </div>
       <div class="upvoteDownvote">
-        <button v-on:click="upvote">Upvote</button>
+        <button v-on:click.prevent="upvote(source)">Upvote</button>
         <button>Downvote</button>
       </div>
     </div>
@@ -34,6 +34,7 @@
 </article>
 </template>
 <script>
+import NewsService from '@/helpers/NewsService.js'
 import CommentList from './CommentList.vue'
 import { eventBus } from "@/main.js";
 
@@ -45,12 +46,23 @@ export default {
     'comment-list': CommentList
   },
   methods: {
-    upvote: function(){
-      eventBus.$emit('upvote', this.source)
+    upvote(source){
+      const upvotedSource = {
+        sourceTitle: this.source.sourceTitle,
+        sourceLink: this.source.sourceLink,
+        rating: this.source.rating + 1,
+        sourceImg: this.source.sourceImg,
+        story: this.source.story,
+        comments: this.source.comments,
+        journalist: this.source.journalist
+      }
+
+      NewsService.updateSource(source.id, upvotedSource)
+      .then(upvotedSource => eventBus.$emit('source-updated', upvotedSource))
+    }
     }
   }
 
-  }
 
 </script>
 <style lang="scss" scoped>

@@ -1,19 +1,19 @@
 <template>
   <div class="storyList">
     <h2>{{story.title}}</h2>
-    <source-list v-for="(source, index) in story.sources" :key="index" :source="source" />
+    <source-view />
   </div>
 </template>
 
 <script>
 
-import SourceList from './SourceList.vue'
+import SourceView from '../views/SourceView.vue'
 
 export default {
   name: "story-list",
   props: ['story'],
   components: {
-    'source-list': SourceList
+    'source-view': SourceView
   }
 }
 </script>

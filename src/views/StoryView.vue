@@ -4,6 +4,7 @@
   </div>
 </template>
 <script>
+import NewsService from '../helpers/NewsService.js'
 import StoryList from '../components/StoryList.vue'
 import { eventBus } from "@/main.js";
 
@@ -11,32 +12,19 @@ export default {
   name: 'story-view',
   data() {
     return {
-      stories: [],
-      sources: [],
-      comments: []
+      stories: []
     }
   },
   components: {
    'story-list': StoryList
-  },
-  created() {
-    fetch('http://localhost:8080/api/stories/')
-    .then(response => response.json())
-    .then(data => this.stories = data)
-    fetch('http://localhost:8080/api/sources')
-    .then(response => response.json())
-    .then(data => this.sources = data)
-    fetch('http://localhost:8080/api/comments')
-    .then(response => response.json())
-    .then(data => this.comments = data)
-},
-methods: {
-  upvote: function(source){
-    let ratingScore = this.rating;
-    ratingScore += this.rating;
+   },
+  mounted(){
+    NewsService.getStories()
+    .then(stories => this.stories = stories);
   }
 }
-}
+
+
 </script>
 <style lang="scss" scoped>
 
