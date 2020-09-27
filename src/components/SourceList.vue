@@ -20,7 +20,7 @@
       </div>
       <div class="upvoteDownvote">
         <button v-on:click.prevent="upvote(source)">Upvote</button>
-        <button>Downvote</button>
+        <button v-on:click.prevent="downvote(source)">Downvote</button>
       </div>
     </div>
   <div class="sourceImgWrapper">
@@ -59,6 +59,20 @@ export default {
 
       NewsService.updateSource(source.id, upvotedSource)
       .then(upvotedSource => eventBus.$emit('source-updated', upvotedSource))
+    },
+    downvote(source){
+      const downvotedSource = {
+        sourceTitle: this.source.sourceTitle,
+        sourceLink: this.source.sourceLink,
+        rating: this.source.rating - 1,
+        sourceImg: this.source.sourceImg,
+        story: this.source.story,
+        comments: this.source.comments,
+        journalist: this.source.journalist
+      }
+
+      NewsService.updateSource(source.id, downvotedSource)
+      .then(downvotedSource => eventBus.$emit('source-updated', downvotedSource))
     }
     }
   }

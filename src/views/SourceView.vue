@@ -22,7 +22,6 @@ import {eventBus} from '@/main.js'
 
       eventBus.$on('source-updated', (updatedSource) => {
         let index = this.sources.findIndex(source => source.id === updatedSource.id)
-        console.log(index);
         this.sources.splice(index, 1, updatedSource)
         })
     },
