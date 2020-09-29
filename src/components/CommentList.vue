@@ -19,8 +19,12 @@ export default {
 
 .comment {
   width: 48%;
+  height: auto;
   border: 1px black solid;
-  margin-left: 1%;
-  margin-right: 1%;
+  margin-left: 12px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-right: 12px;
+  margin: auto;
 }
 </style>

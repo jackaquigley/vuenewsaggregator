@@ -15,6 +15,14 @@ export default {
     return fetch(commentUrl)
     .then(res => res.json());
   },
+  postComment(payload){
+    return fetch(commentUrl, {
+      method: 'POST',
+      body: JSON.stringify(payload),
+      headers: {'Content-Type': 'application/json'}
+    })
+    .then(res => res.json())
+  },
   updateSource(id, payload){
     return fetch(sourceUrl + id, {
       method: 'PUT',

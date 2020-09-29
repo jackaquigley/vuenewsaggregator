@@ -24,6 +24,7 @@ import {eventBus} from '@/main.js'
         let index = this.sources.findIndex(source => source.id === updatedSource.id)
         this.sources.splice(index, 1, updatedSource)
         })
+        
     },
     components: {
       'source-list': SourceList

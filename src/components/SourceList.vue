@@ -29,21 +29,21 @@
   </div>
   <hr>
   <div class="commentWrapper">
-    <comment-list v-for="(comment, index) in source.comments" :key="index" :comment="comment"/>
+    <comment-view :source="source"/>
   </div>
 </article>
 </template>
 <script>
-import NewsService from '@/helpers/NewsService.js'
-import CommentList from './CommentList.vue'
-import { eventBus } from "@/main.js";
 
+import NewsService from '@/helpers/NewsService.js'
+import CommentView from '@/views/CommentView'
+import { eventBus } from "@/main.js";
 
 export default {
   name: "source-list",
   props: ['source'],
   components: {
-    'comment-list': CommentList
+    'comment-view': CommentView
   },
   methods: {
     upvote(source){
@@ -53,6 +53,7 @@ export default {
         rating: this.source.rating + 1,
         sourceImg: this.source.sourceImg,
         story: this.source.story,
+        publisher: this.source.publisher,
         comments: this.source.comments,
         journalist: this.source.journalist
       }
@@ -67,6 +68,7 @@ export default {
         rating: this.source.rating - 1,
         sourceImg: this.source.sourceImg,
         story: this.source.story,
+        publisher: this.source.publisher,
         comments: this.source.comments,
         journalist: this.source.journalist
       }
@@ -141,5 +143,6 @@ height: 180px;
  margin-top: 2px;
  margin-bottom: 2px;
  justify-content: center;
+flex-wrap: wrap;
 }
 </style>
