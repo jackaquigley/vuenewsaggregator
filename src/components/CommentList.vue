@@ -18,7 +18,7 @@ export default {
 <style lang="scss" scoped>
 
 .comment {
-  width: 48%;
+  width: 46%;
   height: auto;
   border: 1px black solid;
   margin-left: 12px;

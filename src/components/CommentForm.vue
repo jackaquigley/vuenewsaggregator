@@ -48,7 +48,7 @@ export default {
 }
 
 form {
-  margin-top: 2px;
-  margin-bottom: 2px;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 </style>

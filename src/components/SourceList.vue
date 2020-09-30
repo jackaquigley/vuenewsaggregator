@@ -29,7 +29,7 @@
   </div>
   <hr>
   <div class="commentWrapper">
-    <comment-view :source="source"/>
+    <comment-view id="commentView" :source="source"/>
   </div>
 </article>
 </template>
@@ -84,16 +84,13 @@ export default {
 <style lang="scss" scoped>
 
 .sourceImg {
-object-fit: cover;
-width: 100%;
-height: 180px;
+  object-fit: cover;
+  width: 100%;
+  height: 180px;
 }
 
 .sourceItem {
   display: flex;
-  flex-wrap:
-  wrap;
-  flex-direction: row;
   height: 100%;
 }
 
@@ -139,10 +136,15 @@ height: 180px;
 }
 
 .commentWrapper {
- display: flex;
+flex-wrap: wrap;
  margin-top: 2px;
  margin-bottom: 2px;
  justify-content: center;
-flex-wrap: wrap;
 }
+
+#commentView {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 </style>

@@ -6,7 +6,9 @@
   </header>
   </div>
   <div id="contentWrapper">
-  <story-view />
+  <router-view></router-view>
+  <div id="sidebar">
+  </div>
   </div>
   </div>
 </template>
@@ -43,6 +45,7 @@ export default {
 #headerWrapper {
   width: 100%;
   height: 20%;
+  margin: 2%;
 }
 
 #contentWrapper {
@@ -50,12 +53,19 @@ export default {
   height: 100%;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
 }
 
-#sidebarWrapper {
+#sidebar {
   width: 20%;
-  height: 100%;
+  height: 100;
+  background: lightblue;
+  margin-right: 2%;
+}
+
+#StoryView {
+  margin-left: 2%;
+  margin-right: 4%;
+  overflow: scroll;
 }
 
 </style>
