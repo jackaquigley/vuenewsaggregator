@@ -1,11 +1,13 @@
 <template>
     <div class="comment">
-      <div class="username">
+      <p>
+      <span class="username">
         {{comment.username}}
-      </div>
-      <div class="commentBody">
+      </span>
+      <span class="commentBody">
         {{comment.commentBody}}
-      </div>
+      </span>
+      </p>
     </div>
 </template>
 <script>
@@ -18,13 +20,20 @@ export default {
 <style lang="scss" scoped>
 
 .comment {
-  width: 46%;
   height: auto;
-  border: 1px black solid;
   margin-left: 12px;
-  margin-top: 2px;
-  margin-bottom: 2px;
+  margin-top: 4px;
+  margin-bottom: 4px;
   margin-right: 12px;
-  margin: auto;
+  width: auto;
+  border: 0.2px lightblue solid;
 }
+
+.username {
+  color: white;
+  margin-right: 12px;
+  background-color: darkblue;
+  margin: 0;
+}
+
 </style>

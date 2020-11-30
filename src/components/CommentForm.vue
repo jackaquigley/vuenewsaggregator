@@ -1,9 +1,13 @@
 <template lang="html">
   <div class="commentForm">
     <form v-on:submit.prevent="addComment" method="post">
-      <p>Add A Comment</p>
-      <input type="text" class="commentUserame" v-model="username" value="Username">
+      <h4 class="commentFormTitle">Add A Comment</h4>
+      <label for="">Username
+      <input type="text" class="commentUsername" v-model="username" value="Username">
+      </label>
+      <label>Comment
       <input type="text" class="commentBody" v-model="commentBody" value="Comment">
+      </label>
       <button type="submit">Add Comment</button>
     </form>
   </div>
@@ -41,14 +45,43 @@ export default {
 
 .commentForm {
   width: 100%;
-  border: 1px black solid;
-  margin-top: 2px;
-  margin-bottom: 2px;
+  margin-top: 8px;
+  margin-bottom: 8px;
   justify-content: center;
 }
 
 form {
-  margin-top: 2%;
-  margin-bottom: 2%;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  height: 100;
+  width: 98%;
+  margin-left: 1%;
+  border: 1px solid black;
+}
+
+.commentUsername {
+  margin-left: 8px;
+  margin-right: 8px;
+  margin: 4px;
+}
+
+.commentBody {
+  margin-left: 8px;
+  margin-right: 8px;
+  margin: 4px;
+}
+
+.commentFormDivider {
+  border: 0.25px solid lightblue;
+}
+
+.commentFormTitle {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+label {
+  margin-left: 8px;
+  margin-right: 8px;
 }
 </style>

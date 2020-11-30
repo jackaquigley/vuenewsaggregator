@@ -68,4 +68,9 @@ export default {
   overflow: scroll;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+  }
+
 </style>

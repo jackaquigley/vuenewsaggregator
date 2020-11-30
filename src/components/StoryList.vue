@@ -1,6 +1,6 @@
 <template>
   <div class="storyList">
-    <h2>{{story.title}}</h2>
+    <h2 class="storyTitle">{{story.title}}</h2>
     <source-view />
   </div>
 </template>
@@ -22,8 +22,17 @@ export default {
 
 .storyList {
   height: auto;
-  width: 100%;
+  width: 98%;
   text-align: center;
+  border: 1px solid black;
+}
+
+.storyTitle {
+  margin-top: 16px;
+  margin: 8px;
+  margin-bottom: 8px;
+  font-size: 40px;
+  border: 1px solid black;
 }
 
 </style>

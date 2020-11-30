@@ -1,7 +1,11 @@
 <template>
-  <div id="commentWrapper">
+  <div>
+    <div class=commentHeaderWrapper>
+    <h4>Comments</h4>
+    </div>
     <comment-list v-for="(comment, index) in filteredComments" :key="index" :comment="comment"/>
     <comment-form :source="source"/>
+    </div>
   </div>
 </template>
 <script>
@@ -43,12 +47,20 @@ export default {
 
 
 </script>
+
 <style lang="scss" scoped>
 
-#storyWrapper {
+#commentView {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  display: flex;
   height: 100%;
+}
+
+.commentHeaderWrapper {
   width: 100%;
-  margin: 1%;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 </style>

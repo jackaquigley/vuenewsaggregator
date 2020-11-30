@@ -1,6 +1,5 @@
 <template>
   <article>
-    <hr>
   <div class="sourceItem">
     <div class="sourceData">
       <div class="sourceTitle">
@@ -27,7 +26,6 @@
     <img class="sourceImg" v-bind:src="source.sourceImg" alt="">
   </div>
   </div>
-  <hr>
   <div class="commentWrapper">
     <comment-view id="commentView" :source="source"/>
   </div>
@@ -92,12 +90,13 @@ export default {
 .sourceItem {
   display: flex;
   height: 100%;
+  width: 98%;
+  margin-left: 1%;
 }
 
 .sourceImgWrapper {
   height: 180px;
   width: 20%;
-  order: 4
 }
 
 .sourceData {
@@ -111,6 +110,10 @@ export default {
   width: 100%;
   height: 20%;
   font-size: 22px;
+  text-align: left;
+  font-size: 20px;
+  margin-top: 8px;
+  margin-left: 16px;
 }
 
 .sourceJournalist{
@@ -136,15 +139,23 @@ export default {
 }
 
 .commentWrapper {
-flex-wrap: wrap;
- margin-top: 2px;
- margin-bottom: 2px;
  justify-content: center;
 }
 
 #commentView {
   display: flex;
   flex-wrap: wrap;
+  border: 1px solid black;
+  width: 98%;
+  margin-left: 1%;
+}
+
+article {
+  border: 1px solid black;
+  width: 98%;
+  margin-left: 1%;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 </style>
