@@ -56,7 +56,6 @@ form {
   height: 100;
   width: 98%;
   margin-left: 1%;
-  border: 1px solid black;
 }
 
 .commentUsername {
@@ -76,7 +75,7 @@ form {
 }
 
 .commentFormTitle {
-  margin-top: 8px;
+  margin-top: 16px;
   margin-bottom: 8px;
 }
 

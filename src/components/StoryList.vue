@@ -21,18 +21,18 @@ export default {
 <style lang="scss" scoped>
 
 .storyList {
-  height: auto;
+  height: 100%;
   width: 98%;
   text-align: center;
-  border: 1px solid black;
-}
+  border: 1px solid lightgrey;
+  }
 
 .storyTitle {
   margin-top: 16px;
   margin: 8px;
   margin-bottom: 8px;
   font-size: 40px;
-  border: 1px solid black;
+  box-shadow: 0px 1px lightgrey;
 }
 
 </style>

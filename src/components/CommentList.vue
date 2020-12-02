@@ -27,13 +27,14 @@ export default {
   margin-right: 12px;
   width: auto;
   border: 0.2px lightblue solid;
+  text-align: center;
 }
 
 .username {
   color: white;
   margin-right: 12px;
   background-color: darkblue;
-  margin: 0;
+  text-align: center;
 }
 
 </style>

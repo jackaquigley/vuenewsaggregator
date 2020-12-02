@@ -145,13 +145,13 @@ export default {
 #commentView {
   display: flex;
   flex-wrap: wrap;
-  border: 1px solid black;
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
   width: 98%;
   margin-left: 1%;
 }
 
 article {
-  border: 1px solid black;
   width: 98%;
   margin-left: 1%;
   margin-top: 16px;

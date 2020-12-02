@@ -59,8 +59,8 @@ export default {
 
 .commentHeaderWrapper {
   width: 100%;
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 </style>
