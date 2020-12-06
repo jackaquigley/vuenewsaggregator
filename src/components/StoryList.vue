@@ -1,7 +1,7 @@
 <template>
   <div class="storyList">
     <h2 class="storyTitle">{{story.title}}</h2>
-    <source-view />
+    <source-view :story="story"/>
   </div>
 </template>
 
