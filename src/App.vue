@@ -38,6 +38,7 @@ export default {
 }
 
 #headerWrapper {
+  height: 10%;
   width: 100%;
   margin: 16px
 }
