@@ -1,6 +1,8 @@
 const storyUrl = "http://localhost:8080/api/stories";
 const sourceUrl = "http://localhost:8080/api/sources/";
 const commentUrl = "http://localhost:8080/api/comments";
+const tagUrl = "http://localhost:8080/api/tags";
+
 
 export default {
   getStories(){
@@ -9,6 +11,10 @@ export default {
   },
   getSources(){
     return fetch(sourceUrl)
+    .then(res => res.json());
+  },
+  getTags(){
+    return fetch(tagUrl)
     .then(res => res.json());
   },
   getComments(){
