@@ -53,7 +53,7 @@ export default {
 #sidebar {
   width: 20%;
   height: 100;
-  background: lightblue;
+  background: darkblue;
   margin-right: 2%;
 }
 
