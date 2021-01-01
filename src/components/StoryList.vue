@@ -1,6 +1,6 @@
 <template>
   <div class="storyList">
-    <h2> <router-link :to="{ name: 'story', params: { id: this.story.id  }}">{{story.title}}</router-link> </h2>
+    <h2> <router-link :to="{ name: 'story', params: { id: this.story.id  }}"> {{story.title}} </router-link> </h2>
     <source-view :story="story"/>
   </div>
 </template>

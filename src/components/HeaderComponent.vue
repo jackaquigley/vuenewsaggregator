@@ -1,7 +1,7 @@
 <template>
   <div id="headerWrapper">
     <div id="titleWrapper">
-    <h1>News Cycle</h1>
+    <h1> <router-link :to="{ name: 'storyView'}">News Cycle</router-link> </h1>
     </div>
     <div id="tagWrapper">
       <tag-list v-for="(tag, index) in uniqueTagList" :key="index" :tag="tag"/>

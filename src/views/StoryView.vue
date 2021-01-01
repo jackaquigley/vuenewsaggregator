@@ -28,11 +28,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 
-#storyWrapper {
-  height: 100%;
-  width: 100%;
-  margin: 2%;
-  overflow: scroll;
-}
+
 
 </style>

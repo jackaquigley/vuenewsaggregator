@@ -1,33 +1,150 @@
 <template lang="html">
   <div class="storyPage">
-    <router-link :to="{ name: 'page', params: { id: story.id  }}">{{story.title}}</router-link>
+    <div class="storyTitle">
+      <h2> <router-link :to="{ name: 'story'}"> {{story.title}} </router-link> </h2>
+    </div>
+    <div v-for="(source, index) in story.sources" :key="index" :source="source" class="storyPageSourceList">
+      <article>
+      <div class="sourceItem">
+        <div class="sourceData">
+          <div class="sourceTitle">
+            <p>{{source.sourceTitle}}</p>
+          </div>
+          <div class="sourceJournalist">
+            <p>{{source.journalist}}</p>
+          </div>
+          <div class="sourcePublisherName">
+            <p>{{source.publisher}}</p>
+          </div>
+          <div class="sourceLink">
+            <a v-bind:href="source.sourceLink">View Article</a>
+          </div>
+          <div class="sourceRating">
+            <p>Rating: {{source.rating}}</p>
+          </div>
+          <div class="upvoteDownvote">
+            <button v-on:click.prevent="upvote(source)">Upvote</button>
+            <button v-on:click.prevent="downvote(source)">Downvote</button>
+          </div>
+        </div>
+      <div class="sourceImgWrapper">
+        <img class="sourceImg" v-bind:src="source.sourceImg" alt="">
+      </div>
+      </div>
+      <div class="articleSample">
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+      </div>
+      <div v-for="(comment, index) in source.comments" :key="index" :commeny="comment">
+        <div class="comment">
+          <p>
+          <span class="username">
+            {{comment.username}}
+          </span>
+          <span class="commentBody">
+            {{comment.commentBody}}
+          </span>
+          </p>
+        </div>
+      </div>
+    </article>
   </div>
+</div>
 </template>
 
 <script>
   export default {
     name: 'story-page',
-    props: ['story'],
-
+    props: ['story', 'comment']
     }
 
 </script>
 
 <style lang="css">
 
-.storyPage {
-  height: 100%;
-  width: 98%;
-  text-align: center;
-  border: 1px solid lightgrey;
-  }
-
-.storyTitle {
-  margin-top: 16px;
-  margin: 8px;
-  margin-bottom: 8px;
-  font-size: 40px;
-  box-shadow: 0px 1px lightgrey;
+.sourceImg {
+  object-fit: cover;
+  width: 100%;
+  height: 180px;
 }
 
+.sourceItem {
+  display: flex;
+  height: 100%;
+  width: 98%;
+  margin-left: 1%;
+}
+
+.sourceImgWrapper {
+  height: 180px;
+  width: 20%;
+}
+
+.sourceData {
+  width: 80%;
+  height: auto;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.sourceTitle {
+  width: 100%;
+  height: 20%;
+  font-size: 22px;
+  text-align: left;
+  font-size: 20px;
+  margin-top: 8px;
+  margin-left: 16px;
+}
+
+.sourceJournalist{
+  width: 50%;
+  height: 20%;
+  font-size: 18px;
+}
+
+.sourcePublisherName {
+  width: 50%;
+  height: 20%;
+  font-size: 18px;
+}
+
+.sourceLink {
+  height: 20%;
+  width: 33%;
+}
+
+.sourceRating {
+  height: 20%;
+  width: 33%;
+}
+
+.commentWrapper {
+ justify-content: center;
+}
+
+#commentView {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+  width: 98%;
+  margin-left: 1%;
+}
+
+article {
+  width: 98%;
+  margin-left: 1%;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.storyPage {
+  text-align: center;
+  width: 98%;
+}
+
+.articleSample {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
 </style>

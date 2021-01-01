@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="component-wrapper">
+  <div class="storyPageWrapper">
     <story-page :story="story"/>
   </div>
 </template>
@@ -28,4 +28,9 @@ export default {
 </script>
 
 <style lang="css">
+
+.storyPageWrapper {
+  width: 100%;
+}
+
 </style>
