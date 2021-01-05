@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="tagLink">
-  <h4>{{tag}}</h4>
+  <h4> <router-link :to="{ name: 'tagSearch', params: { tag: this.tag }}"> {{tag}} </router-link> </h4>
   </div>
 </template>
 

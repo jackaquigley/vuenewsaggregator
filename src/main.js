@@ -8,5 +8,11 @@ export const eventBus = new Vue()
 
 new Vue({
   router,
+  watch: {
+    "$route.params": function(params) {
+      this.tag = params.page;
+      console.log(params);
+    }
+  },
   render: h => h(App),
 }).$mount('#app')
