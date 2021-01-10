@@ -20,21 +20,13 @@ export default {
 <style lang="scss" scoped>
 
 .comment {
-  height: auto;
-  margin-left: 12px;
-  margin-top: 4px;
-  margin-bottom: 4px;
-  margin-right: 12px;
-  width: auto;
-  border: 0.2px lightblue solid;
-  text-align: center;
+  min-height: 10%;
+  width: 20%;
+  margin: 1%;
 }
 
 .username {
-  color: white;
-  margin-right: 12px;
-  background-color: darkblue;
-  text-align: center;
+  font-family: Playfair;
 }
 
 </style>

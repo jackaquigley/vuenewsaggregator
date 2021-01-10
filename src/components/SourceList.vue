@@ -6,7 +6,7 @@
         <p>{{source.sourceTitle}}</p>
       </div>
       <div class="sourceJournalist">
-        <p>{{source.journalist}}</p>
+        <p>By {{source.journalist}}</p>
       </div>
       <div class="sourcePublisherName">
         <p>{{source.publisher}}</p>
@@ -81,81 +81,114 @@ export default {
 </script>
 <style lang="scss" scoped>
 
-.sourceImg {
-  object-fit: cover;
-  width: 100%;
-  height: 180px;
+article {
+  margin: 1%;
+  display: flex;
+  border-top: 1px solid lightblue;
+  border-bottom: 1px solid lightblue;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  height: 40%;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 .sourceItem {
-  display: flex;
-  height: 100%;
-  width: 98%;
-  margin-left: 1%;
-}
-
-.sourceImgWrapper {
-  height: 180px;
-  width: 20%;
+ width: 100%;
+ display: flex;
 }
 
 .sourceData {
+  width: 100%;
+}
+
+
+.sourceData {
   width: 80%;
-  height: auto;
-  flex-wrap: wrap;
+  height: 100%;
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.sourceImgWrapper {
+  height: 80%;
+  width: 20%;
+}
+
+.sourceImg {
+  width: 100%;
+  height: auto;
 }
 
 .sourceTitle {
-  width: 100%;
-  height: 20%;
-  font-size: 22px;
-  text-align: left;
-  font-size: 20px;
-  margin-top: 8px;
-  margin-left: 16px;
+  height: 30%;
+  width: 65%;
+  text-align: center;
+  font-family: Playfair;
+  font-size: 32px;
 }
 
-.sourceJournalist{
-  width: 50%;
-  height: 20%;
-  font-size: 18px;
+.sourceJournalist {
+  min-height: 30%;
+  width: 35%;
+  font-family: Playfair;
+  font-size: 24px;
+  text-align: center;
+  align-items: center;
 }
 
 .sourcePublisherName {
+  min-height: 20%;
   width: 50%;
-  height: 20%;
-  font-size: 18px;
+  text-align: center;
+  font-family: Playfair;
+  font-size: 24px;
+  align-items: center;
 }
 
 .sourceLink {
-  height: 20%;
-  width: 33%;
+  min-height: 20%;
+  width: 50%;
+  font-family: Playfair;
+  text-align: center;
+  font-size: 24px;
+  align-items: center;
 }
 
 .sourceRating {
-  height: 20%;
-  width: 33%;
+  min-height: 20%;
+  width: 50%;
+  font-family: Playfair;
+  text-align: center;
+  font-size: 24px;
+  align-items: center;
+}
+
+.upvoteDownvote {
+  min-height: 20%;
+  width: 50%;
+  font-family: Playfair;
+  text-align: center;
+  font-size: 24px;
+  align-items: center;
+}
+
+button {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: 20%;
+  margin-right: 20%;
+  font-size: 24px;
 }
 
 .commentWrapper {
- justify-content: center;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  width: 100%;
 }
 
-#commentView {
-  display: flex;
-  flex-wrap: wrap;
-  border-top: 1px solid lightgrey;
-  border-bottom: 1px solid lightgrey;
-  width: 98%;
-  margin-left: 1%;
+.commentForm {
+  width: 100%;
 }
-
-article {
-  width: 98%;
-  margin-left: 1%;
-  margin-top: 16px;
-  margin-bottom: 16px;
-}
-
 </style>

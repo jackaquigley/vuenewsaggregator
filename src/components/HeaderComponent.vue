@@ -1,8 +1,8 @@
 <template>
   <div id="headerWrapper">
-    <div id="titleWrapper">
-    <h1> <router-link :to="{ name: 'storyView'}">News Cycle</router-link> </h1>
-    </div>
+    <span id="titleWrapper">
+    <h1 > <router-link id="title" :to="{ name: 'storyView'}">News Cycle</router-link> </h1>
+    </span>
     <div id="tagWrapper">
       <tag-list v-for="(tag, index) in uniqueTagList" :key="index" :tag="tag"/>
     </div>
@@ -44,21 +44,42 @@ export default {
 </script>
 <style lang="scss" scoped>
 
+@font-face {
+  font-family: "Domine";
+  src: local("Domine"),
+   url(../../public/Domine-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Playfair";
+  src: local("Playfair"),
+   url(../../public/PlayfairDisplay-Regular.ttf) format("truetype");
+}
+
 #headerWrapper {
-  display: flex;
+ display: flex;
+ flex-direction: row;
 }
 
 #titleWrapper {
+  width: 15%;
   height: 100%;
-  width: 20%;
   text-align: center;
+  border-right: solid lightblue 0.5px;
+}
+
+#title {
+  font-family: Domine;
+  color: black;
+  text-decoration: none;
 }
 
 #tagWrapper {
-  display: flex;
-  flex-wrap: wrap;
-  height: 100%;
-  width: 80%;
+display: flex;
+flex-wrap: wrap;
+font-family: Playfair;
+width: 85%;
+margin-left: 1%;
 }
 
 </style>

@@ -11,7 +11,6 @@ new Vue({
   watch: {
     "$route.params": function(params) {
       this.tag = params.page;
-      console.log(params);
     }
   },
   render: h => h(App),

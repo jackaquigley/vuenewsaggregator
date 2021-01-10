@@ -45,42 +45,28 @@ export default {
 
 .commentForm {
   width: 100%;
-  margin-top: 8px;
-  margin-bottom: 8px;
-  justify-content: center;
-}
-
-form {
-  margin-top: 8px;
-  margin-bottom: 8px;
-  height: 100;
-  width: 98%;
-  margin-left: 1%;
-}
-
-.commentUsername {
-  margin-left: 8px;
-  margin-right: 8px;
-  margin: 4px;
-}
-
-.commentBody {
-  margin-left: 8px;
-  margin-right: 8px;
-  margin: 4px;
-}
-
-.commentFormDivider {
-  border: 0.25px solid lightblue;
 }
 
 .commentFormTitle {
-  margin-top: 16px;
-  margin-bottom: 8px;
+  text-align: center;
+}
+
+form {
+  align-items: center;
+  width: 100%;
+  text-align: center;
 }
 
 label {
-  margin-left: 8px;
-  margin-right: 8px;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin: 0.5%;
 }
+
+input {
+  margin-left: 1%;
+  margin-right: 2%;
+  margin: 0.5%;
+}
+
 </style>

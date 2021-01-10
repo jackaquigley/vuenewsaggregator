@@ -1,7 +1,7 @@
 <template>
   <div class="storyList">
-    <h2> <router-link :to="{ name: 'story', params: { id: this.story.id  }}"> {{story.title}} </router-link> </h2>
-    <source-view :story="story"/>
+    <h2> <router-link class="storyTitle":to="{ name: 'story', params: { id: this.story.id  }}"> {{story.title}} </router-link> </h2>
+    <source-view class="sourceView":story="story"/>
   </div>
 </template>
 
@@ -21,18 +21,19 @@ export default {
 <style lang="scss" scoped>
 
 .storyList {
-  height: 100%;
-  width: 98%;
-  text-align: center;
-  border: 1px solid lightgrey;
-  }
+  width: 100%;
+  border-top: 1px solid lightblue;
+  border-bottom: 1px solid lightblue;
+}
 
 .storyTitle {
-  margin-top: 16px;
-  margin: 8px;
-  margin-bottom: 8px;
-  font-size: 40px;
-  box-shadow: 0px 1px lightgrey;
+  font-family: PlayfairDisplay-Bold;
+  margin-left: 0.5%;
+  color: black;
+  font-size: 48px;
+}
+
+.sourceView {
 }
 
 </style>

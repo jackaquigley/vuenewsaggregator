@@ -28,6 +28,10 @@ export default {
 </script>
 <style lang="scss" scoped>
 
+#storyWrapper {
+  border-left: 1px solid lightblue;
+  border-right: 1px solid lightblue;
+}
 
 
 </style>

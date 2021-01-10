@@ -6,9 +6,7 @@
   </header>
   </div>
   <div id="contentWrapper">
-  <router-view></router-view>
-  <div id="sidebar">
-  </div>
+  <router-view id="routerView"></router-view>
   </div>
   </div>
 </template>
@@ -29,43 +27,48 @@ export default {
 
 <style>
 
+@font-face {
+  font-family: "Domine";
+  src: local("Domine"),
+   url(../public/Domine-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Playfair";
+  src: local("Playfair"),
+   url(../public/PlayfairDisplay-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Playfair-Bold";
+  src: local("Playfair-Bold"),
+   url(../public/PlayfairDisplay-Bold.ttf) format("truetype");
+}
+
 #pageWrapper {
-  width: 100%;
-  height: 100%;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
 }
 
 #headerWrapper {
-  height: 10%;
   width: 100%;
-  margin: 16px
+  height: 6%;
+  position: fixed;
+  background: white;
 }
 
 #contentWrapper {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 98%;
+  margin-left: 0.5%;
+  height: 85%;
+  margin-top: 6%;
+  border-left: 1px solid lightblue;
+  border-right: 1px solid lightblue;
+  position: fixed;
+}
+
+#routerView {
   width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
 }
-
-#sidebar {
-  width: 20%;
-  height: 100;
-  background: darkblue;
-  margin-right: 2%;
-}
-
-#StoryView {
-  margin-left: 2%;
-  margin-right: 4%;
-  overflow: scroll;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-  }
-
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="commentsWrapper">
     <div class=commentHeaderWrapper>
     <h4>Comments</h4>
     </div>
@@ -50,17 +50,18 @@ export default {
 
 <style lang="scss" scoped>
 
-#commentView {
-  margin-top: 8px;
-  margin-bottom: 8px;
+.commentsWrapper {
+  width: 100%;
   display: flex;
-  height: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+justify-content: center;
 }
 
 .commentHeaderWrapper {
+  height: 10%;
+  text-align: center;
   width: 100%;
-  margin-top: 16px;
-  margin-bottom: 16px;
 }
 
 </style>

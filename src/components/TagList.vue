@@ -14,8 +14,10 @@ export default {
 <style lang="css" scoped>
 
 .tagLink {
-  background: lightgrey;
-  margin: 12px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
 }
 
 </style>
