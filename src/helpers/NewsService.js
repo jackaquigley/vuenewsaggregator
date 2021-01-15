@@ -2,8 +2,6 @@ const storyUrl = "http://localhost:8080/api/stories/";
 const sourceUrl = "http://localhost:8080/api/sources/";
 const commentUrl = "http://localhost:8080/api/comments";
 const tagUrl = "http://localhost:8080/api/tags";
-const tagSearch = "tagSearch"
-
 
 export default {
   getStories(){

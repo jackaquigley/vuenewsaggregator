@@ -20,9 +20,11 @@ export default {
 <style lang="scss" scoped>
 
 .comment {
-  min-height: 10%;
+  min-width: 15%;
+  max-width: 24%;
   width: 20%;
-  margin: 1%;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
 }
 
 .username {

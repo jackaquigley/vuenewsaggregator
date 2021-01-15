@@ -45,6 +45,7 @@ export default {
 
 .commentForm {
   width: 100%;
+  border-bottom: 1px solid lightblue;
 }
 
 .commentFormTitle {
@@ -55,6 +56,9 @@ form {
   align-items: center;
   width: 100%;
   text-align: center;
+  margin-top: 1%;
+  margin-bottom: 1%;
+
 }
 
 label {

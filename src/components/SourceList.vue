@@ -56,8 +56,8 @@ export default {
         journalist: this.source.journalist
       }
 
-      NewsService.updateSource(source.id, upvotedSource)
-      .then(upvotedSource => eventBus.$emit('source-updated', upvotedSource))
+      NewsService.updateStory(story.id, upvotedStory)
+      .then(upvotedStory => eventBus.$emit('story-upvoted', upvotedStory))
     },
     downvote(source){
       const downvotedSource = {
@@ -71,9 +71,9 @@ export default {
         journalist: this.source.journalist
       }
 
-      NewsService.updateSource(source.id, downvotedSource)
-      .then(downvotedSource => eventBus.$emit('source-updated', downvotedSource))
-    }
+      NewsService.updateStory(story.id, downvotedStory)
+      .then(downvotedStory => eventBus.$emit('story-upvoted', downvotedStory))
+    },
     }
   }
 
@@ -85,7 +85,6 @@ article {
   margin: 1%;
   display: flex;
   border-top: 1px solid lightblue;
-  border-bottom: 1px solid lightblue;
   margin-top: 1%;
   margin-bottom: 1%;
   height: 40%;
@@ -186,6 +185,7 @@ button {
   margin-top: 1%;
   margin-bottom: 1%;
   width: 100%;
+  border-top: 1px solid lightblue;
 }
 
 .commentForm {

@@ -55,7 +55,7 @@
   export default {
     name: 'story-page',
     props: ['story', 'comment']
-    }
+  }
 
 </script>
 
